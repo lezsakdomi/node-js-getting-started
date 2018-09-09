@@ -1,5 +1,5 @@
 container:
-    image: node:latest
+    image: node:10.10.0
 check_task:
   node_modules_cache:
     folder: node_modules
