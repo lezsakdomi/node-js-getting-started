@@ -1,6 +1,8 @@
 container:
   image: node:latest
 check_task:
-  script:
-    - yarn install
-    - yarn test
+  node_modules_cache:
+    folder: node_modules
+    fingerprint_script: cat yarn.lock
+    populate_script: yarn install
+  script: yarn test
